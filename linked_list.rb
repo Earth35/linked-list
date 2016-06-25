@@ -44,7 +44,10 @@ class LinkedList
   end
   
   def contains? (element)
-    self.contents.include?(element)
+    self.contents.each do |i|
+      return true if i.value == element
+    end
+    return false
   end
   
   def find (data)

@@ -51,17 +51,32 @@ class LinkedList
   end
   
   def find (data)
-    #
+    i = 0
+    while self.contents[i]
+      return i if self.contents[i].value == data
+      i += 1
+    end
+    return nil
   end
   
   def to_s
-    #
+    string = ""
+    i = 0
+    while self.contents[i]
+      if i == self.contents.length-1
+        string += "#{self.contents[i].value} -> #{self.contents[i].next_node.inspect}"
+      else
+        string += "#{self.contents[i].value} -> "
+      end
+      i += 1
+    end
+    return string
   end
   
   # extras
   
   def insert_at (index) 
-    
+    #
   end
   
   def remove_at (index)

@@ -38,14 +38,16 @@ class LinkedList
   end
   
   def pop
-    #
+    popped_node = self.contents.pop
+    self.contents[-1].next_node = nil
+    popped_node
   end
   
-  def contains?
-    #
+  def contains? (element)
+    self.contents.include?(element)
   end
   
-  def find (data) 
+  def find (data)
     #
   end
   

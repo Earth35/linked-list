@@ -14,6 +14,13 @@ class LinkedList
     self.list << new_node
   end
   
+  def prepend (value)
+    new_node = Node.new
+    new_node.value = value
+    new_node.next_node = self.list[0] ? self.list[0] : nil
+    self.list.unshift(new_node)
+  end
+  
   class Node
     attr_accessor :value, :next_node
     def initialize

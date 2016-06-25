@@ -1,7 +1,7 @@
 class LinkedList
-  attr_accessor :list
+  attr_accessor :contents
   def initialize
-    @list = []
+    @contents = []
   end
   
   public
@@ -9,32 +9,32 @@ class LinkedList
   def append (value)
     new_node = Node.new
     new_node.value = value
-    previous_node = self.list[-1]
+    previous_node = self.contents[-1]
     previous_node.next_node = new_node if previous_node
-    self.list << new_node
+    self.contents << new_node
   end
   
   def prepend (value)
     new_node = Node.new
     new_node.value = value
-    new_node.next_node = self.list[0] ? self.list[0] : nil
-    self.list.unshift(new_node)
+    new_node.next_node = self.contents[0] ? self.contents[0] : nil
+    self.contents.unshift(new_node)
   end
   
   def size
-    self.list.length
+    self.contents.length
   end
   
   def head
-    self.list[0]
+    self.contents[0]
   end
   
   def tail
-    self.list[-1]
+    self.contents[-1]
   end
   
   def at (index)
-    self.list[index]
+    self.contents[index]
   end
   
   def pop

@@ -26,15 +26,15 @@ class LinkedList
   end
   
   def head
-    #
+    self.list[0]
   end
   
   def tail
-    #
+    self.list[-1]
   end
   
   def at (index)
-    #
+    self.list[index]
   end
   
   def pop

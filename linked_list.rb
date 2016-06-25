@@ -21,6 +21,48 @@ class LinkedList
     self.list.unshift(new_node)
   end
   
+  def size
+    self.list.length
+  end
+  
+  def head
+    #
+  end
+  
+  def tail
+    #
+  end
+  
+  def at (index)
+    #
+  end
+  
+  def pop
+    #
+  end
+  
+  def contains?
+    #
+  end
+  
+  def find (data) 
+    #
+  end
+  
+  def to_s
+    #
+  end
+  
+  # extras
+  
+  def insert_at (index) 
+    
+  end
+  
+  def remove_at (index)
+    #
+  end
+  
   class Node
     attr_accessor :value, :next_node
     def initialize

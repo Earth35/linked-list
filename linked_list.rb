@@ -86,7 +86,8 @@ class LinkedList
   end
   
   def remove_at (index)
-    #
+    self.contents[index-1].next_node = self.contents[index+1]
+    self.contents.delete_at(index)
   end
   
   class Node

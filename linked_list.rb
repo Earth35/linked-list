@@ -75,8 +75,14 @@ class LinkedList
   
   # extras
   
-  def insert_at (index) 
-    #
+  def insert_at (index, value)
+    inserted_node = Node.new
+    previous_node = self.contents[index-1]
+    following_node = self.contents[index]
+    inserted_node.value = value
+    inserted_node.next_node = following_node
+    self.contents.insert(index, inserted_node)
+    previous_node.next_node = inserted_node
   end
   
   def remove_at (index)
